@@ -1,0 +1,17 @@
+#!/net/aps/64/bin/python3.1
+
+from PyQt4 import QtGui
+
+import sys
+
+import GuessWidget
+
+if __name__ == "__main__":
+  app = QtGui.QApplication(sys.argv)
+
+  w = GuessWidget.GuessWidget()
+  w.show()
+  w.raise_()
+
+  app.exec_()
+

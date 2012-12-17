@@ -1,0 +1,28 @@
+#!/net/aps/64/bin/python3.1
+
+import sys
+
+from PyQt4 import QtGui
+
+def printGreeting():
+  print("Hello again!")
+
+if __name__ == "__main__":
+  app = QtGui.QApplication(sys.argv)
+
+  w = QtGui.QWidget()
+
+  layout = QtGui.QVBoxLayout()
+  layout.addWidget(QtGui.QLabel("Hello world!"))
+  button = QtGui.QPushButton("Press me")
+  layout.addWidget(button)
+
+  # Als er op de knop 'button' wordt geklikt, voer
+  # dan de functie 'printGreeting' uit.
+  button.clicked.connect(printGreeting)
+
+  w.setLayout(layout)
+  w.show()
+  w.raise_()
+
+  sys.exit(app.exec_())

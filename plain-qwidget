@@ -1,0 +1,27 @@
+#!/net/aps/64/bin/python3.1
+
+# Voor sys.argv
+import sys
+
+# Importeer de GUI functionaliteit van PyQt...
+from PyQt4 import QtGui
+
+if __name__ == "__main__":
+  # Voordat we Qt klassen gebruiken: altijd eerst een
+  # QApplication maken. We geven de argumenten van het
+  # programma door aan de QApplication instantie.
+  app = QtGui.QApplication(sys.argv)
+
+  # Maak een QWidget.
+  w = QtGui.QWidget()
+
+  # Toon de widget.
+  w.show()
+
+  # Zet de widget op de voorgrond.
+  w.raise_()
+
+  # Lever controle over aan de Qt main loop. exec_()
+  # geeft pas de controle terug als we bijvoorbeeld
+  # de widget sluiten...
+  sys.exit(app.exec_())

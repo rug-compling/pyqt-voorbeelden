@@ -1,0 +1,18 @@
+#!/net/aps/64/bin/python3.1
+
+# Dit programma is identiek aan plain-qbutton, behalve dat
+# we een QPushButton widget maken.
+
+import sys
+
+from PyQt4 import QtGui
+
+if __name__ == "__main__":
+  app = QtGui.QApplication(sys.argv)
+
+  w = QtGui.QPushButton("Hallo!")
+
+  w.show()
+  w.raise_()
+
+  sys.exit(app.exec_())

@@ -1,0 +1,26 @@
+#!/net/aps/64/bin/python3.1
+
+import sys
+
+from PyQt4 import QtGui
+
+if __name__ == "__main__":
+  app = QtGui.QApplication(sys.argv)
+
+  # We gebruiken QWidget als een venster.
+  w = QtGui.QWidget()
+
+  # Verticale layout.
+  layout = QtGui.QVBoxLayout()
+
+  # Een QLabel wordt gebruikt om een kort stuk text op te nemen.
+  layout.addWidget(QtGui.QLabel("Hello world!"))
+  layout.addWidget(QtGui.QPushButton("Press me"))
+
+  # We gebruiken de layout als de layout van de QWidget.
+  w.setLayout(layout)
+
+  w.show()
+  w.raise_()
+
+  sys.exit(app.exec_())
